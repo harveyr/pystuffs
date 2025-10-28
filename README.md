@@ -6,6 +6,7 @@ Finally getting around to putting my commonly written and re-written util functi
 
 ```sh
 pip install git@github.com:harveyr/pystuffs.git
-# or
-uv pip install "git@github.com:harveyr/pystuffs.git"
+
+# or with uv:
+uv add git+https://github.com/harveyr/pystuffs.git
 ```

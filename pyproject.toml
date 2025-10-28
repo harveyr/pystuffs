@@ -3,5 +3,10 @@ name = "pystuffs"
 version = "0.1.0"
 description = "Harvey's library of commonly re-written stuffs"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.9"
 dependencies = []
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/harveyr/pystuffs"
