@@ -1,6 +1,18 @@
 from pathlib import Path
 
-from pystuffs.path import unexpand_user
+import pytest
+
+import pystuffs.path as testee
+
+
+def test_assert_path_exists_with_str_instance():
+    with pytest.raises(testee.PathNotExistError):
+        testee.assert_path_exists("/everlasting/gobstoppers")
+
+
+def test_assert_path_exists_with_path_instance():
+    with pytest.raises(testee.PathNotExistError):
+        testee.assert_path_exists(Path("/everlasting/gobstoppers"))
 
 
 def test_unexpand_user_with_path_instance():
@@ -9,5 +21,5 @@ def test_unexpand_user_with_path_instance():
     assert str(test_path) != raw
     assert str(test_path).startswith("/")
 
-    result = unexpand_user(test_path)
+    result = testee.unexpand_user(test_path)
     assert result == str(raw)
